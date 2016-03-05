@@ -30,5 +30,13 @@ var config = {
       destination : "", // Destination of your trip. Human readable address.
       name : "work", // Name of your destination ex: "work"
       reload_interval : 5 // Number of minutes the information is refreshed
+    },
+    news: {
+        update_interval: 6000,  // How often to rotate through rss articles
+        fetch_interval: 600000, // How often to retrieve new rss articles
+        rss: [
+            "http://feeds.reuters.com/reuters/technologyNews",
+            "http://rss.cnn.com/rss/edition.rss"
+        ]
     }
 }

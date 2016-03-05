@@ -11,6 +11,7 @@
             XKCDService,
             GiphyService,
             TrafficService,
+            RssReaderService,
             $scope, $timeout, $interval) {
         var _this = this;
         var DEFAULT_COMMAND_TEXT = 'Say "What can I say?" to see a list of commands...';
@@ -87,6 +88,18 @@
                 console.debug("Ok, going to default view...");
                 $scope.focus = "default";
             }
+
+            RssReaderService.init($scope);
+
+            // Show RSS news feed
+            AnnyangService.addCommand('show news', function() {
+                RssReaderService.enableNews();
+            })
+
+            // Hide RSS news feed
+            AnnyangService.addCommand('hide news', function() {
+                RssReaderService.disableNews();
+            })
 
             // List commands
             AnnyangService.addCommand('What can I say', function() {
