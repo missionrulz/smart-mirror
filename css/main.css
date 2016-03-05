@@ -65,6 +65,10 @@ dt {
     font-family: 'Open Sans', sans-serif;
 }
 
+.rss-news {
+    font-size: 26px;
+}
+
 .top-left {
     float: left;
 }
